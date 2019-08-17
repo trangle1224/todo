@@ -18,3 +18,8 @@ api.post('/add', (req, res) => {
 	console.log(req.body);
 	res.send('It works!');
 });
+
+api.use((req, res, next) => {
+ console.log('Hello');
+ next();
+});
